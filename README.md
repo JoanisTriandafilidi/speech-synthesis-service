@@ -12,7 +12,7 @@ The service outputs a binary audio data containing text recorded in the specifie
 
 ## Model details:
 
-The service receives a raw English text sentence and uses it as input to the advanced Tacotron2-based model, followed by the WaveGlow vocoder, both of which were consecutively trained on the open LJ Speech dataset and outputs the speech audio samples as a binary file. Both models run on the same P100 GPU to ensure the fastest data flow between models and duplicated to provide more service bandwidth. The scaling factor is 2xServices per 1xP100 GPU. The input sequence is limited to140 characters, longer sentences should be splitted.
+The service receives a raw English text sentence and uses it as input to the advanced Tacotron2-based model, followed by the WaveGlow vocoder, both of which were consecutively trained on the open LJ Speech dataset and outputs the speech audio samples as a binary file. Both models run on the same P100 GPU to ensure the fastest data flow between models and duplicated to provide more service bandwidth. The scaling factor is 2xServices per 1xP100 GPU. The input sequence is limited to 140 characters, longer sentences should be splitted.
 
 ## How does it work?
 
